@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    background: #1b2a4a;
+    color: white;
+}
+
+
+ul a {
+    color: #cdd6e4;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+ul a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+ul a.active {
+    background: #0e9f8a;
+    color: white;
+}

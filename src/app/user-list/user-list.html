@@ -1,0 +1,42 @@
+@if (loading()) {
+<p>Loading users...</p>
+}
+
+@if (errorMessage()) {
+<p class="error">{{ errorMessage() }}</p>
+}
+
+@if (!loading() && !errorMessage()) {
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Hourly Rate</th>
+            <th>Active</th>
+            <th>Join Date</th>
+            <th>Skills</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of users(); track user._id) {
+        <tr>
+            <td>{{ user.fullName }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.hourlyRate }}</td>
+            <td>{{ user.isActive ? '✅ Yes' : '❌ No' }}</td>
+            <td>{{ user.joinDate }}</td>
+            <td>{{ user.skills.join(', ') }}</td>
+            <td>{{ user.city }}</td>
+            <td>{{ user.country }}</td>
+        </tr>
+        } @empty {
+        <tr>
+            <td colspan="8">No users yet. Add one from the Add User page!</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}

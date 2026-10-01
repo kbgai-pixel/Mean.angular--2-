@@ -1,0 +1,52 @@
+<form class="card" (ngSubmit)="submitPet()">
+    <label>
+        Pet Name
+        <input type="text" name="petName" [(ngModel)]="petData.petName" required />
+    </label>
+
+    <div class="row">
+        <label>
+            Animal Type
+            <input type="text" name="animalType" [(ngModel)]="petData.animalType" placeholder="Dog, Cat, Bird..." />
+        </label>
+        <label>
+            Breed
+            <input type="text" name="breed" [(ngModel)]="petData.breed" />
+        </label>
+    </div>
+
+    <div class="row">
+        <label>
+            Age
+            <input type="number" name="age" [(ngModel)]="petData.age" />
+        </label>
+        <label>
+            Weight (kg)
+            <input type="number" name="weight" [(ngModel)]="petData.weight" />
+        </label>
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" name="vaccinated" [(ngModel)]="petData.vaccinated" />
+        Vaccinated
+    </label>
+
+    <div class="row">
+        <label>
+            Owner Name
+            <input type="text" name="ownerName" [(ngModel)]="petData.ownerName" />
+        </label>
+        <label>
+            Color
+            <input type="text" name="color" [(ngModel)]="petData.color" />
+        </label>
+    </div>
+
+    <button type="submit" [disabled]="saving()">
+        {{ saving() ? 'Saving...' : 'Save Pet' }}
+    </button>
+
+    @if (message()) {
+    <p class="message">{{ message() }}</p>
+    }
+</form>

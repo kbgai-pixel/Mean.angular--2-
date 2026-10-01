@@ -1,0 +1,51 @@
+<form class="card" (ngSubmit)="submitUser()">
+    <label>
+        Full Name
+        <input type="text" name="fullName" [(ngModel)]="userData.fullName" required />
+    </label>
+
+    <div class="row">
+        <label>
+            Age
+            <input type="number" name="age" [(ngModel)]="userData.age" />
+        </label>
+        <label>
+            Hourly Rate
+            <input type="number" name="hourlyRate" [(ngModel)]="userData.hourlyRate" />
+        </label>
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" name="isActive" [(ngModel)]="userData.isActive" />
+        Is Active
+    </label>
+
+    <label>
+        Join Date
+        <input type="date" name="joinDate" [(ngModel)]="userData.joinDate" />
+    </label>
+
+    <label>
+        Skills (comma separated)
+        <input type="text" name="skills" [(ngModel)]="userData.skills" placeholder="e.g. HTML, CSS, JavaScript" />
+    </label>
+
+    <div class="row">
+        <label>
+            City
+            <input type="text" name="city" [(ngModel)]="userData.city" />
+        </label>
+        <label>
+            Country
+            <input type="text" name="country" [(ngModel)]="userData.country" />
+        </label>
+    </div>
+
+    <button type="submit" [disabled]="saving()">
+        {{ saving() ? 'Saving...' : 'Save User' }}
+    </button>
+
+    @if (message()) {
+    <p class="message">{{ message() }}</p>
+    }
+</form>
