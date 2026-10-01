@@ -1,25 +1,30 @@
 # Pet & User Management System
 
-A simple Angular application for managing pets and users in one place. The app includes a home dashboard, forms for adding records, and dedicated pages for viewing users and pets.
+A lightweight Angular application for managing pets and users through a simple dashboard interface.
 
 ## Overview
 
-This project is built with Angular 22 and provides a clean, route-based interface for:
+This project was created to provide a clean CRUD-style management experience for tracking pets and users in a single app. It includes a landing page, navigation, route-based pages, and dedicated forms for adding records.
 
-- viewing the home dashboard
-- adding new users
-- adding new pets
-- browsing the users list
-- browsing the pets list
+## Tech Stack
+
+- Angular 22
+- TypeScript
+- Angular Router
+- Angular CLI
+- CSS for styling
 
 ## Features
 
-- Responsive navigation bar for all main sections
-- Dedicated pages for home, user management, and pet management
-- Angular routing for a lightweight single-page experience
-- Modular component structure for organizing UI and logic
+- Home dashboard with a welcoming landing screen
+- Add user form
+- Add pet form
+- User list page
+- Pet list page
+- Navigation bar for quick access between sections
+- Component-based Angular structure for maintainability
 
-## Project structure
+## Project Structure
 
 ```text
 src/
@@ -37,76 +42,68 @@ src/
     app.routes.ts
     app.ts
     app.html
+    app.css
 ```
 
 ## Prerequisites
 
-Before running the app, make sure you have:
+Make sure the following are installed on your machine:
 
-- Node.js 20+ recommended
+- Node.js 20 or newer
 - npm
 
-## Getting started
+## Installation
 
-1. Install dependencies:
+Clone the repository and install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Start the development server:
+## Running the App
+
+Start the local development server:
 
 ```bash
 npm start
 ```
 
-3. Open the app in your browser:
+Then open:
 
 ```text
 http://localhost:4200/
 ```
 
-The Angular dev server automatically reloads when source files change.
+The app will reload automatically while you make changes.
 
-## Available scripts
+## Available Scripts
 
-| Script | Command | Purpose |
-| --- | --- | --- |
-| Start | `npm start` | Launch the Angular development server |
-| Build | `npm run build` | Create a production build |
-| Watch | `npm run watch` | Build in watch mode during development |
-| Test | `npm test` | Run the test suite |
-| SSR serve | `npm run serve:ssr:petmgtsystem` | Serve the server-rendered build |
+```bash
+npm start        # start the Angular development server
+npm run build    # create a production build
+npm run watch    # build in watch mode
+npm test         # run the test suite
+```
 
-## Application routes
+## Routes
 
 The app currently includes these routes:
 
 - `/` – Home page
 - `/add-user` – Add user page
 - `/add-pet` – Add pet page
-- `/user` – Users list page
-- `/pet` – Pets list page
+- `/user` – User list page
+- `/pet` – Pet list page
 
-## Development notes
+## Development Notes
 
-- This app uses Angular CLI and Angular Router.
-- Styling and component structure are organized under the `src/app` directory.
-- The project is set up as a small management dashboard, suitable for extension with backend APIs or persistence later.
+This project is structured as a small management dashboard and is suitable for extension with:
 
-## Useful commands
-
-```bash
-# run the app
-npm start
-
-# create a production build
-npm run build
-
-# run tests
-npm test
-```
+- backend API integration
+- database persistence
+- validation and error handling
+- improved forms and filtering
 
 ## License
 
-This project is for educational and local development use unless otherwise specified by the project owner.
+This project is intended for educational and local development use unless otherwise specified by the project owner.
