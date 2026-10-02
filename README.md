@@ -107,3 +107,7 @@ This project is structured as a small management dashboard and is suitable for e
 ## License
 
 This project is intended for educational and local development use unless otherwise specified by the project owner.
+
+
+Author
+Khadijah Haliru
